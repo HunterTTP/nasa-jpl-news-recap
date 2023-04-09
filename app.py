@@ -34,7 +34,7 @@ def summarize_text(text):
 
     response = openai.Completion.create(
         engine="text-davinci-002",
-        prompt=f"Please make an engaging summary of the following text, keep it short and easy to read:\n\n{text}\n",
+        prompt=f"Make an engaging summary of this text. Ensure it's brief and anyone can read it:\n\n{text}\n",
         temperature=0.7,
         max_tokens=300,
         top_p=1,
