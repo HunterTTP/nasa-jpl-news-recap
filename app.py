@@ -1,7 +1,8 @@
 from flask import Flask, render_template
-import requests
 from bs4 import BeautifulSoup
+import requests
 import openai
+import os
 
 app = Flask(__name__)
 
