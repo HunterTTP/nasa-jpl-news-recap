@@ -26,10 +26,10 @@ def get_latest_news_url_and_content():
 def summarize_text(text):
     try:
         with open("openai_api_key.txt", "r") as f:
-            openai_api_key = f.read().strip()
+            openai.api_key = f.read().strip()
     except FileNotFoundError:
         # If the file doesn't exist, fall back to the environment variable
-        openai_api_key = os.environ.get("OPENAI_API_KEY")
+        openai.api_key = os.environ.get("OPENAI_API_KEY")
 
     response = openai.Completion.create(
         engine="text-davinci-002",
