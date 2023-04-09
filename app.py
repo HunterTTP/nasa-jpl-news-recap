@@ -24,8 +24,8 @@ def get_latest_news_url_and_content():
 
 
 def summarize_text(text):
-    with open('openai_api_key.txt', 'r') as f:
-        openai.api_key = f.readline().strip()
+    # need to replace with openai_api_key.txt, not sure how to handle it in heroku yet
+    openai.api_key = "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"
 
     response = openai.Completion.create(
         engine="text-davinci-002",
