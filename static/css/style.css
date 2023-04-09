@@ -1,0 +1,39 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #fff;
+    background-image: url('../textures/space.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+html {
+    height: 100%;
+}
+
+.container {
+    display: inline-block;
+    padding: 1vw;
+    background-color: rgba(128, 128, 128, 0.6);
+    border-radius: 5px;
+}
+
+h1 {
+    font-size: 2vw;
+    text-align: center;
+    margin: 0;
+    padding-bottom: 1vw;
+}
+
+@media only screen and (max-width: 600px) {
+    h1 {
+        font-size: 6vw;
+    }
+}
