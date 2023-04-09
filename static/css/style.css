@@ -1,8 +1,15 @@
+#globe-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
     color: #fff;
-    background-image: url('../textures/space.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -23,7 +30,9 @@ html {
     padding: 1vw;
     background-color: rgba(128, 128, 128, 0.6);
     border-radius: 5px;
+    z-index: 1;
 }
+
 
 h1 {
     font-size: 2vw;
@@ -34,6 +43,6 @@ h1 {
 
 @media only screen and (max-width: 600px) {
     h1 {
-        font-size: 6vw;
+        font-size: 4vw;
     }
 }

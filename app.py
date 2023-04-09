@@ -24,7 +24,8 @@ def get_latest_news_url_and_content():
 
 
 def summarize_text(text):
-    openai.api_key = "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"
+    with open('openai_api_key.txt', 'r') as f:
+        openai.api_key = f.readline().strip()
 
     response = openai.Completion.create(
         engine="text-davinci-002",
