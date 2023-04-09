@@ -4,16 +4,6 @@ This project is a simple Flask web application that fetches the latest news from
 
 https://nasa-jpl-news-recap.herokuapp.com/
 
-
-## How it works
-
-The NASA JPL News Recap web application consists of several components:
-
-1. The backend is built using the Flask web framework. It handles fetching the latest news from NASA JPL, summarizing it using OpenAI's GPT-3 API, and rendering the frontend.
-2. The application scrapes the latest news from NASA JPL's website using BeautifulSoup and Requests libraries.
-3. The fetched news content is summarized using OpenAI's GPT-3 API to generate a brief and engaging summary.
-4. The frontend displays a 3D Mars globe rendered with Three.js. The locations of Mars rovers are marked on the globe using their latitude and longitude coordinates.
-
 ## Prerequisites
 
 - Python 3
