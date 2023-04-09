@@ -5,16 +5,17 @@ function initThreeJs(satelliteData) {
 
     // Set up the scene
     scene = new THREE.Scene();
-    scene.background = new THREE.TextureLoader().load('/static/textures/space.jpg');
 
     // Set up the camera
     camera = new THREE.PerspectiveCamera(60, container.clientWidth / container.clientHeight, 0.1, 2000);
-    camera.position.z = 4;
+    camera.position.z = 2.5;
 
     // Set up the renderer
-    renderer = new THREE.WebGLRenderer({ antialias: true });
+    renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+    renderer.setClearColor(0x000000, 0);
     renderer.setSize(container.clientWidth, container.clientHeight);
     container.appendChild(renderer.domElement);
+
 
     // Add the globe to the scene
     createGlobe();

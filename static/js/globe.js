@@ -4,5 +4,4 @@ function createGlobe() {
     const globeMaterial = new THREE.MeshPhongMaterial({ map: globeTexture });
     globe = new THREE.Mesh(globeGeometry, globeMaterial);
     scene.add(globe);
-    globe.position.set(0,0.5,0)
 }

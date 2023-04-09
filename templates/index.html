@@ -10,9 +10,6 @@
 </head>
 <body>
     <div id="globe-container"></div>
-    <script src="{{ url_for('static', filename='js/globe.js') }}"></script>
-    <script src="{{ url_for('static', filename='js/init.js') }}"></script>
-    <script>initThreeJs()</script>
     <div class="container">
         <h1>Latest NASA JPL News</h1>
         <p>{{ summary }}</p>
@@ -20,5 +17,9 @@
             <a href="{{ press_release_url }}" target="_blank">Read more</a>
         </p>
     </div>
+    <script src="{{ url_for('static', filename='js/init.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/globe.js') }}"></script>
+    <script>initThreeJs()</script>
 </body>
 </html>
+
