@@ -1,4 +1,4 @@
-let container, camera, scene, renderer, globe, satellites, controls, labelRenderer;
+let container, camera, scene, renderer, globe, satellites, labelRenderer;
 
 function initThreeJs(satelliteData) {
     container = document.getElementById('globe-container');
@@ -11,6 +11,9 @@ function initThreeJs(satelliteData) {
 
     // Add rover markers to the scene
     addRoverMarkersToScene();
+
+    // Set up the controls
+    setupControls();
 
     // Add a light source
     addLightSourceToScene();

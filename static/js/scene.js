@@ -12,10 +12,6 @@ function setupScene() {
     renderer.setSize(container.clientWidth, container.clientHeight);
     container.appendChild(renderer.domElement);
 
-    // Add OrbitControls for user interaction
-    controls = new THREE.OrbitControls(camera, renderer.domElement);
-    controls.autoRotate = true;
-    controls.autoRotateSpeed = 0.5;
 }
 
 function addLightSourceToScene() {
