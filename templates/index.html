@@ -13,9 +13,8 @@
     <section>
         <h1>Latest NASA JPL News</h1>
         <p>{{ summary }}</p>
-        <p>
-            <br>
-            <a href="{{ press_release_url }}" target="_blank">Read more</a>
+        <p class="read-more-container">
+            <a href="{{ press_release_url }}" target="_blank" class="read-more">Read more</a>
         </p>
     </section>
     <script src="{{ url_for('static', filename='js/scene.js') }}"></script>
@@ -25,7 +24,7 @@
     <script src="{{ url_for('static', filename='js/init.js') }}"></script>
     <script>initThreeJs()</script>
 <footer>
-    <a href="https://github.com/HunterTTP/nasa-jpl-news-recap">site source</a>
+    <a href="https://github.com/HunterTTP/nasa-jpl-news-recap">source</a>
 </footer>
 </body>
 </html>

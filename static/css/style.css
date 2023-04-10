@@ -41,8 +41,12 @@ section {
     padding-bottom: 10px;
     line-height: 1.5;
 }
+.read-more-container {
+    margin-top: 15px;
+    font-size: 0.9rem;
+}
 footer {
-    padding: 35px;
+    padding: 30px;
     line-height: 1.5;
     color: grey;
     font-weight: regular;
@@ -52,8 +56,9 @@ footer a:visited,
 footer a:active,
 footer a:hover {
     color: #808080;
-    opacity: 0.8;
-    font-weight: bold;
+    font-size: 0.75rem;
+    opacity: 1.5;
+    font-weight: regular;
     text-decoration: none;
 }
 footer a:hover {

@@ -7,7 +7,7 @@ function setupControls() {
     controls.enableDamping = true;
     controls.dampingFactor = 0.05;
     controls.screenSpacePanning = false;
-    controls.minDistance = 1.1;
+    controls.minDistance = 1.3;
     controls.maxDistance = 10;
 
     // Set initial camera position
