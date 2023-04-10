@@ -43,7 +43,7 @@ function initThreeJs(satelliteData) {
     // Add OrbitControls for user interaction
     controls = new THREE.OrbitControls(camera, renderer.domElement);
     controls.autoRotate = true;
-    controls.autoRotateSpeed = 1;
+    controls.autoRotateSpeed = 0.5;
 
     // Render loop
     animate();
