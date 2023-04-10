@@ -9,4 +9,8 @@ function setupControls() {
     controls.screenSpacePanning = false;
     controls.minDistance = 1.1;
     controls.maxDistance = 10;
+
+    // Set initial camera position
+    camera.position.set(2.5, 0, 0);
+    controls.update();
 }
