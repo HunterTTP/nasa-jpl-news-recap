@@ -34,15 +34,15 @@ header {
 }
 section h1 {
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 section {
-    padding: 40px;
+    padding: 20px;
     padding-bottom: 10px;
     line-height: 1.5;
 }
 footer {
-    padding: 40px;
+    padding: 20px;
     line-height: 1.5;
     color: grey;
     font-weight: regular;
