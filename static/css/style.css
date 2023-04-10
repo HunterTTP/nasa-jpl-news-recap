@@ -15,6 +15,7 @@ body {
     margin: 0;
     display: flex;
     justify-content: center;
+    align-items: center; /* Add this line to vertically center the container */
     flex-direction: column;
 }
 
@@ -30,16 +31,18 @@ body {
     height: 60vh;
 }
 
+
 .container {
     display: inline-block;
-    padding: 1vw;
+    padding: 2vw 2vw 2vw;
     background-color: rgba(128, 128, 128, 0.6);
     border-radius: 5px;
     z-index: 1;
-    width: 100vw;
+    width: 96vw;
     height: 40vh;
     overflow-y: auto;
     box-sizing: border-box;
+    margin: 0 auto;
 }
 
 h1 {
@@ -49,32 +52,3 @@ h1 {
     padding-bottom: 2vw;
 }
 
-@media (min-width: 768px) {
-
-    #globe-container {
-        height: 70vh;
-    }
-
-    .container {
-        height: 30vh;
-    }
-
-    h1 {
-        font-size: 3vw;
-    }
-}
-
-@media (min-width: 1024px) {
-
-    #globe-container {
-        height: 60vh;
-    }
-
-    .container {
-        height: 40vh;
-    }
-
-    h1 {
-        font-size: 2vw;
-    }
-}
