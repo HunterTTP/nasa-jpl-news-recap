@@ -11,6 +11,6 @@ function setupControls() {
     controls.maxDistance = 10;
 
     // Set initial camera position
-    camera.position.set(2.5, 0, 0);
+    camera.position.set(3, 0, 0);
     controls.update();
 }
