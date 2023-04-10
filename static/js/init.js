@@ -8,7 +8,7 @@ function initThreeJs(satelliteData) {
 
     // Set up the camera
     camera = new THREE.PerspectiveCamera(60, container.clientWidth / container.clientHeight, 0.1, 2000);
-    camera.position.z = 2.5;
+    camera.position.z = 3;
 
     // Set up the renderer
     renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
