@@ -26,7 +26,6 @@ https://nasa-jpl-news-recap.herokuapp.com/
 
 ## Limitations
 
-1. The application relies on the OpenAI API for text summarization. Users need to have their own API key and be aware of the usage costs associated with the API.
-2. The web scraping method used to fetch the latest news from NASA JPL's website may break if the website's structure changes. It is important to monitor and update the scraping logic as necessary.
-3. The rover locations on the 3D Mars globe are currently hardcoded. Integrating a more dynamic method to fetch and display rover locations would make the application more robust and up-to-date.
-4. The application is designed for local use or small-scale deployments. For larger-scale applications, consider using caching, optimizing resource usage, and deploying the application on a scalable infrastructure.
+1. Users need to have their own OpenAI API key for the ChatGPT text sumamry.
+2. The web scraping method used to fetch the latest news from NASA JPL's website may break if the website's structure changes.
+3. The rover locations on the 3D Mars globe are currently hardcoded to the landing locations instead of real-time.
