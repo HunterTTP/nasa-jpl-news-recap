@@ -16,7 +16,7 @@ a:hover {
     text-decoration: none;
 }
 a:hover {
-    color: white;
+    opacity: 0.5;
 }
 header {
     height: 70vh;
