@@ -9,17 +9,17 @@
     <title>NASA JPL News</title>
 </head>
 <body>
-    <div id="globe-container"></div>
-    <div class="container">
+    <header id="globe-container"></header>
+    <section>
         <h1>Latest NASA JPL News</h1>
         <p>{{ summary }}</p>
         <p>
+            <br>
             <a href="{{ press_release_url }}" target="_blank">Read more</a>
         </p>
-    </div>
+    </section>
     <script src="{{ url_for('static', filename='js/init.js') }}"></script>
     <script src="{{ url_for('static', filename='js/globe.js') }}"></script>
     <script>initThreeJs()</script>
 </body>
 </html>
-
