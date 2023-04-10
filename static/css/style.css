@@ -2,6 +2,10 @@
     margin: 0;
     padding: 0;
 }
+@font-face {
+    font-family: Metropolis;
+    src: url('/static/fonts/Metropolis-Regular.woff2') format('woff2');
+}
 body {
     background-position: center;
     background-color: #333333;
@@ -29,17 +33,17 @@ header {
     background-image: url('/static/textures/space.jpg');
 }
 section h1 {
-    height: 2vh;
     text-align: center;
     margin-bottom: 30px;
 }
 section {
-    height: 28vh;
     padding: 40px;
-    padding-bottom: 60px;
+    padding-bottom: 10px;
     line-height: 1.5;
 }
-@font-face {
-    font-family: Metropolis;
-    src: url('/static/fonts/Metropolis-Regular.woff2') format('woff2');
+footer {
+    padding: 40px;
+    line-height: 1.5;
+    color: grey;
+    font-weight: regular;
 }
