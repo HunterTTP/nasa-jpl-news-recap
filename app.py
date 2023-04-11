@@ -8,7 +8,9 @@ app = Flask(__name__)
 
 
 def get_latest_news_url_and_content():
-    response = requests.get('https://www.jpl.nasa.gov/news?sortBy=latestDate&page=1')
+    response = requests.get('https://www.jpl.nasa.gov/news?topics=Mars,Solar%20System,Stars%20and%20Galaxies,'
+                            'Asteroids%20and%20Comets,Technology,Earth,Weather,Climate%20Change,Exoplanets,'
+                            'Earthquakes,Robotics,CubeSats%20and%20SmallSats&page=1')
     html_content = response.text
     soup = BeautifulSoup(html_content, 'html.parser')
     card = soup.find('div', class_='SearchResultCard')
@@ -34,7 +36,7 @@ def summarize_text(text):
 
     response = openai.Completion.create(
         engine="text-davinci-002",
-        prompt=f"Make an engaging summary of this text. Ensure it's brief and anyone can read it:\n\n{text}\n",
+        prompt=f"Make an engaging, easy to read and brief summary of this article:\n\n{text}\n",
         temperature=0.7,
         max_tokens=300,
         top_p=1,
