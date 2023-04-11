@@ -3,6 +3,8 @@ from bs4 import BeautifulSoup
 import requests
 import openai
 import os
+import json
+from apscheduler.schedulers.background import BackgroundScheduler
 
 app = Flask(__name__)
 
@@ -48,12 +50,35 @@ def summarize_text(text):
     return summary
 
 
-@app.route('/')
-def index():
+def fetch_and_store_latest_news():
     latest_news_url, content = get_latest_news_url_and_content()
     summary = summarize_text(content)
-    return render_template('index.html', summary=summary, press_release_url=latest_news_url)
+    latest_news = {"summary": summary, "press_release_url": latest_news_url}
+
+    with open("latest_news.json", "w") as f:
+        json.dump(latest_news, f)
+
+
+def read_latest_news():
+    with open("latest_news.json", "r") as f:
+        latest_news = json.load(f)
+    return latest_news
+
+
+@app.route('/')
+def index():
+    latest_news = read_latest_news()
+    return render_template('index.html', summary=latest_news["summary"],
+                           press_release_url=latest_news["press_release_url"])
 
 
 if __name__ == '__main__':
+    # Fetch and store the latest news at startup
+    fetch_and_store_latest_news()
+
+    # Schedule to fetch and store the latest news every 6 hours
+    scheduler = BackgroundScheduler()
+    scheduler.add_job(fetch_and_store_latest_news, 'interval', hours=6)
+    scheduler.start()
+
     app.run(debug=True)
