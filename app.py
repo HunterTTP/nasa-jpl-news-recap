@@ -38,7 +38,8 @@ def summarize_text(text):
 
     response = openai.Completion.create(
         engine="text-davinci-002",
-        prompt=f"Make an engaging, easy to read and brief summary of this article:\n\n{text}\n",
+        prompt=f"Make an engaging, easy to read and brief summary of this article. "
+               f"Do not say 'This article' in your summary:\n\n{text}\n",
         temperature=0.7,
         max_tokens=300,
         top_p=1,
@@ -55,11 +56,15 @@ def fetch_and_store_latest_news():
     summary = summarize_text(content)
     latest_news = {"summary": summary, "press_release_url": latest_news_url}
 
-    with open("latest_news.json", "w") as f:
-        json.dump(latest_news, f)
+    if not os.path.exists("latest_news.json"):
+        with open("latest_news.json", "w") as f:
+            json.dump(latest_news, f)
 
 
 def read_latest_news():
+    if not os.path.exists("latest_news.json"):
+        fetch_and_store_latest_news()
+
     with open("latest_news.json", "r") as f:
         latest_news = json.load(f)
     return latest_news
