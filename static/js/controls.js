@@ -8,7 +8,8 @@ function setupControls() {
     controls.dampingFactor = 0.05;
     controls.screenSpacePanning = false;
     controls.minDistance = 1.3;
-    controls.maxDistance = 5;
+    controls.maxDistance = 5
+    controls.enablePan = false;
 
     // Set initial camera position based on screen width
     if (window.innerWidth < 768) {
