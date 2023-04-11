@@ -45,22 +45,19 @@ section {
     margin-top: 15px;
     font-size: 0.9rem;
 }
-footer {
-    padding: 30px;
-    line-height: 1.5;
-    color: grey;
-    font-weight: regular;
+.source-link-container {
+    margin-top: 15px;
 }
-footer a:link,
-footer a:visited,
-footer a:active,
-footer a:hover {
-    color: #808080;
-    font-size: 0.75rem;
-    opacity: 1.5;
-    font-weight: regular;
-    text-decoration: none;
-}
-footer a:hover {
+.source-link-container a:link,
+.source-link-container a:visited,
+.source-link-container a:active,
+.source-link-container a:hover {
+        color: #808080;
+        font-size: 0.75rem;
+        opacity: 1.5;
+        font-weight: regular;
+        text-decoration: none;
+    }
+.source-link-container a:hover {
     opacity: 0.5;
 }
