@@ -38,10 +38,10 @@ def summarize_text(text):
 
     response = openai.Completion.create(
         engine="text-davinci-002",
-        prompt=f"Make an engaging, easy to read and brief summary of this article. "
-               f"Do not say 'This article' in your summary:\n\n{text}\n",
+        prompt=f"Make a summary (minimum 100 words) of this article that anyone could read and understand."
+               f"\n\n{text}\n",
         temperature=0.7,
-        max_tokens=300,
+        max_tokens=200,
         top_p=1,
         frequency_penalty=0,
         presence_penalty=0,
@@ -55,6 +55,8 @@ def fetch_and_store_latest_news():
     latest_news_url, content = get_latest_news_url_and_content()
     summary = summarize_text(content)
     latest_news = {"summary": summary, "press_release_url": latest_news_url}
+
+    clear_existing_news()
 
     if not os.path.exists("latest_news.json"):
         with open("latest_news.json", "w") as f:
@@ -70,6 +72,11 @@ def read_latest_news():
     return latest_news
 
 
+def clear_existing_news():
+    if os.path.exists("latest_news.json"):
+        os.remove("latest_news.json")
+
+
 @app.route('/')
 def index():
     latest_news = read_latest_news()
@@ -78,7 +85,7 @@ def index():
 
 
 if __name__ == '__main__':
-    # Fetch and store the latest news at startup
+    # On start, generate the latest news
     fetch_and_store_latest_news()
 
     # Schedule to fetch and store the latest news every 6 hours
