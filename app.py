@@ -38,7 +38,7 @@ def summarize_text(text):
 
     response = openai.Completion.create(
         engine="text-davinci-002",
-        prompt=f"Make a summary (minimum 100 words) of this article that anyone could read and understand."
+        prompt=f"Make a summary (minimum 75 words) of this article that anyone could read and understand."
                f"\n\n{text}\n",
         temperature=0.7,
         max_tokens=200,
