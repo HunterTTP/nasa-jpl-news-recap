@@ -2,8 +2,6 @@
 
 This project is a simple Flask web application that fetches the latest news from NASA's Jet Propulsion Laboratory (JPL) website, summarizes it using OpenAI's GPT-3 API, and displays it along with an interactive 3D Mars globe showing the locations of Mars rovers.
 
-https://nasa-jpl-news-recap.herokuapp.com/
-
 ## Prerequisites
 
 - Python 3
